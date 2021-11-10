@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../dist",
+  "deleteDestPath": true,
+  "whitelistedNonPeerDependencies": ["froala-editor"],
+  "lib": {
+    "entryFile": "index.ts"
+  }
+}

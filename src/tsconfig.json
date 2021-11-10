@@ -1,35 +1,27 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../dist",
-    "target": "es5",
+    "declaration": true,
     "module": "es2015",
-    "moduleResolution": "node",
+    "target": "es2015",
+    "baseUrl": "./",
+    "stripInternal": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "inlineSources": true,
-    "noEmitHelpers": false,
-    "noImplicitAny": false,
-    "declaration": true,
-    "skipLibCheck": false,
-    "stripInternal": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "es6"],
-    "types": [
-      "jquery"
-    ]
+    "moduleResolution": "node",
+    "outDir": "../build",
+    "rootDir": ".",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "types": ["jquery"]
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "files": [
-    "./index.ts"
-  ],
   "angularCompilerOptions": {
-    "genDir": "../temp/factories",
+    "enableIvy": false,
+    "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
-  }
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "angular-froala-wysiwyg.js",
+    "flatModuleId": "angular-froala-wysiwyg"
+  },
+  "files": ["./index.ts"]
 }
