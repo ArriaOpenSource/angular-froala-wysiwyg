@@ -42,5 +42,3 @@ scripts/**/*.map
 /src/typings/tsd/
 /typings/**
 /tsd_typings/
-
-package-lock.json
