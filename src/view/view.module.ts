@@ -1,6 +1,6 @@
-import { NgModule, ModuleWithProviders } from "@angular/core";
+import {NgModule, ModuleWithProviders} from '@angular/core';
 
-import { FroalaViewDirective } from "./view.directive";
+import {FroalaViewDirective} from './view.directive';
 
 @NgModule({
   declarations: [FroalaViewDirective],
@@ -8,6 +8,6 @@ import { FroalaViewDirective } from "./view.directive";
 })
 export class FroalaViewModule {
   public static forRoot(): ModuleWithProviders<FroalaViewModule> {
-    return { ngModule: FroalaViewModule, providers: [] };
+    return {ngModule: FroalaViewModule, providers: []};
   }
 }

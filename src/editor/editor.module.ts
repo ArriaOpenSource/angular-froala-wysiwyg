@@ -1,6 +1,6 @@
-import { NgModule, ModuleWithProviders } from "@angular/core";
+import {NgModule, ModuleWithProviders} from '@angular/core';
 
-import { FroalaEditorDirective } from "./editor.directive";
+import {FroalaEditorDirective} from './editor.directive';
 
 @NgModule({
   declarations: [FroalaEditorDirective],
@@ -8,6 +8,6 @@ import { FroalaEditorDirective } from "./editor.directive";
 })
 export class FroalaEditorModule {
   public static forRoot(): ModuleWithProviders<FroalaEditorModule> {
-    return { ngModule: FroalaEditorModule, providers: [] };
+    return {ngModule: FroalaEditorModule, providers: []};
   }
 }

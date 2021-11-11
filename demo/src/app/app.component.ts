@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 declare var $: any;
 
 @Component({
-  selector: "app-demo",
+  selector: 'app-demo',
   template: `
     <h1>Angular adapter for the Froala WYSIWYG editor</h1>
     <div class="sample">
@@ -24,26 +24,17 @@ declare var $: any;
     </div>
     <div class="sample">
       <h2>Sample 4: Manual Initialization</h2>
-      <button class="manual" (click)="initControls.initialize()">
-        Initialize Editor
-      </button>
+      <button class="manual" (click)="initControls.initialize()">Initialize Editor</button>
       <button
         (click)="initControls.destroy()"
         [hidden]="!initControls || initControls.getEditor() == null"
       >
         Close Editor
       </button>
-      <button
-        (click)="deleteAll()"
-        [hidden]="!initControls || initControls.getEditor() == null"
-      >
+      <button (click)="deleteAll()" [hidden]="!initControls || initControls.getEditor() == null">
         Delete All
       </button>
-      <div
-        [froalaEditor]
-        (froalaInit)="initialize($event)"
-        [(froalaModel)]="sample3Text"
-      >
+      <div [froalaEditor] (froalaInit)="initialize($event)" [(froalaModel)]="sample3Text">
         Check out the
         <a href="https://www.froala.com/wysiwyg-editor">Froala Editor</a>
       </div>
@@ -69,9 +60,7 @@ declare var $: any;
     </div>
     <div class="sample">
       <h2>Sample 8: Editor on 'a' tag. Manual Initialization</h2>
-      <button class="manual" (click)="linkInitControls.initialize()">
-        Initialize Editor
-      </button>
+      <button class="manual" (click)="linkInitControls.initialize()">Initialize Editor</button>
       <button
         (click)="linkInitControls.destroy()"
         [hidden]="!linkInitControls || linkInitControls.getEditor() == null"
@@ -79,10 +68,7 @@ declare var $: any;
         Close Editor
       </button>
       <div>
-        <a
-          [froalaEditor]
-          (froalaInit)="initializeLink($event)"
-          [(froalaModel)]="linkModel"
+        <a [froalaEditor] (froalaInit)="initializeLink($event)" [(froalaModel)]="linkModel"
           >Froala Editor</a
         >
       </div>
@@ -129,29 +115,29 @@ declare var $: any;
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
-    $.FroalaEditor.DefineIcon("alert", { NAME: "info" });
-    $.FroalaEditor.RegisterCommand("alert", {
-      title: "Hello",
+    $.FroalaEditor.DefineIcon('alert', {NAME: 'info'});
+    $.FroalaEditor.RegisterCommand('alert', {
+      title: 'Hello',
       focus: false,
       undo: false,
       refreshAfterCallback: false,
 
       callback: function () {
-        alert("Hello!");
+        alert('Hello!');
       },
     });
   }
 
   // Sample 1 models
   public titleOptions: Object = {
-    placeholderText: "Edit Your Content Here!",
+    placeholderText: 'Edit Your Content Here!',
     charCounterCount: false,
     toolbarInline: true,
     events: {
-      "froalaEditor.initialized": function () {
-        console.log("initialized");
+      'froalaEditor.initialized': function () {
+        console.log('initialized');
       },
-      "froalaEditor.contentChanged": (e: any, editor: any) => {
+      'froalaEditor.contentChanged': (e: any, editor: any) => {
         console.log(editor);
       },
     },
@@ -172,37 +158,33 @@ export class AppComponent implements OnInit {
   public initialize(initControls) {
     this.initControls = initControls;
     this.deleteAll = function () {
-      this.initControls.getEditor()("html.set", "");
-      this.initControls.getEditor()("undo.reset");
-      this.initControls.getEditor()("undo.saveStep");
+      this.initControls.getEditor()('html.set', '');
+      this.initControls.getEditor()('undo.reset');
+      this.initControls.getEditor()('undo.saveStep');
     };
   }
 
   // Sample 5 model
   public imgModel: Object = {
-    src: "/image.jpg",
+    src: '/image.jpg',
   };
 
   public imgOptions: Object = {
-    angularIgnoreAttrs: [
-      "style",
-      "ng-reflect-froala-editor",
-      "ng-reflect-froala-model",
-    ],
+    angularIgnoreAttrs: ['style', 'ng-reflect-froala-editor', 'ng-reflect-froala-model'],
     immediateAngularModelUpdate: true,
     events: {
-      "froalaEditor.contentChanged": (e: any, editor: any) => {},
+      'froalaEditor.contentChanged': (e: any, editor: any) => {},
     },
   };
 
   // Sample 6 model
   public buttonModel: Object = {
-    innerHTML: "Click Me",
+    innerHTML: 'Click Me',
   };
 
   // Sample 7 models
   public inputModel: Object = {
-    placeholder: "I am an input!",
+    placeholder: 'I am an input!',
   };
 
   // Sample 8 model
@@ -210,35 +192,35 @@ export class AppComponent implements OnInit {
     this.linkInitControls = linkInitControls;
   };
   public linkModel: Object = {
-    href: "https://www.froala.com/wysiwyg-editor",
+    href: 'https://www.froala.com/wysiwyg-editor',
   };
 
   // Sample 9
   form = new FormGroup({
-    formModel: new FormControl("Hello World", Validators.minLength(2)),
-  }) as FormGroup & { formModel: FormControl };
+    formModel: new FormControl('Hello World', Validators.minLength(2)),
+  }) as FormGroup & {formModel: FormControl};
   get formModel(): any {
-    return this.form.get("formModel");
+    return this.form.get('formModel');
   }
   onSubmit(): void {
     console.log(this.form.value);
   }
   setValue() {
-    this.form.setValue({ formModel: "Default text" });
+    this.form.setValue({formModel: 'Default text'});
   }
 
   // Sample 10
   form2 = new FormGroup({
-    formModel: new FormControl("Hello World", Validators.minLength(2)),
+    formModel: new FormControl('Hello World', Validators.minLength(2)),
   });
   get form2Model(): any {
-    return this.form2.get("formModel");
+    return this.form2.get('formModel');
   }
   onSubmit2(): void {
     console.log(this.form2.value);
   }
   setValue2() {
-    this.form2.setValue({ formModel: "Default text" });
+    this.form2.setValue({formModel: 'Default text'});
   }
 
   // Sample 11
@@ -246,27 +228,9 @@ export class AppComponent implements OnInit {
 
   public options: Object = {
     charCounterCount: true,
-    toolbarButtons: ["bold", "italic", "underline", "paragraphFormat", "alert"],
-    toolbarButtonsXS: [
-      "bold",
-      "italic",
-      "underline",
-      "paragraphFormat",
-      "alert",
-    ],
-    toolbarButtonsSM: [
-      "bold",
-      "italic",
-      "underline",
-      "paragraphFormat",
-      "alert",
-    ],
-    toolbarButtonsMD: [
-      "bold",
-      "italic",
-      "underline",
-      "paragraphFormat",
-      "alert",
-    ],
+    toolbarButtons: ['bold', 'italic', 'underline', 'paragraphFormat', 'alert'],
+    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat', 'alert'],
+    toolbarButtonsSM: ['bold', 'italic', 'underline', 'paragraphFormat', 'alert'],
+    toolbarButtonsMD: ['bold', 'italic', 'underline', 'paragraphFormat', 'alert'],
   };
 }
