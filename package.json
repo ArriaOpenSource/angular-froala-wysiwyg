@@ -60,17 +60,8 @@
     "@angular/platform-browser-dynamic": "^17.0.5",
     "@angular/router": "^17.0.5",
     "@types/jquery": "^2.0.40",
-    "@types/marked": "0.0.28",
-    "@types/node": "7.0.0",
-    "@types/tapable": "^1.0.4",
-    "@types/webpack": "^4.39.5",
-    "classlist-polyfill": "1.0.3",
-    "core-js": "^2.6.11",
+    "core-js": "^3.33.3",
     "ng-packagr": "^17.0.2",
-    "rxjs": "~6.5.3",
-    "rxjs-compat": "~6.5.3",
-    "ts-helpers": "^1.1.1",
-    "tsickle": "^0.40.0",
     "typescript": "~5.2.0",
     "zone.js": "~0.14.2"
   }

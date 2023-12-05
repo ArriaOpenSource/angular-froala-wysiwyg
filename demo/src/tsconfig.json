@@ -3,23 +3,15 @@
     "declaration": false,
     "experimentalDecorators": true,
     "noEmitHelpers": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "types": [
-      "webpack",
-      "jquery"
-    ],
+    "lib": ["es6", "dom"],
+    "types": ["jquery"],
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "../temp/out-tsc",
     "sourceMap": true,
     "target": "ES2022",
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
+    "typeRoots": ["../../node_modules/@types"],
     "useDefineForClassFields": false
   }
 }
