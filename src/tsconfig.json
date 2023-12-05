@@ -15,8 +15,8 @@
     "types": ["jquery"]
   },
   "angularCompilerOptions": {
-    "enableIvy": false,
     "annotateForClosureCompiler": true,
+    "compilationMode": "partial",
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "angular-froala-wysiwyg.js",
