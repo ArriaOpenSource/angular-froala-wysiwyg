@@ -3,7 +3,6 @@
   "compilerOptions": {
     "declaration": true,
     "module": "es2015",
-    "target": "es2020",
     "baseUrl": "./",
     "stripInternal": true,
     "experimentalDecorators": true,
