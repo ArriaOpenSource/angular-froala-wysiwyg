@@ -4,7 +4,8 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-froala-wysiwyg": {
-      "root": "src",
+      "root": "./",
+      "sourceRoot": "src",
       "projectType": "library",
       "architect": {
         "build": {
@@ -86,7 +87,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "",
-      "styleext": "css"
+      "style": "css"
     },
     "@schematics/angular:directive": {
       "prefix": ""

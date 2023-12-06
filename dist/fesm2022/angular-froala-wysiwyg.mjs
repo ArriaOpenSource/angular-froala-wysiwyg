@@ -333,26 +333,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.5", ngImpor
                 }]
         }] });
 
-const MODULES = [
-    FroalaEditorModule,
-    FroalaViewModule
-];
+const MODULES = [FroalaEditorModule, FroalaViewModule];
 class FERootModule {
     /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, imports: [FroalaEditorModule, FroalaViewModule], exports: [FroalaEditorModule,
-            FroalaViewModule] }); }
-    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, imports: [FroalaEditorModule.forRoot(),
-            FroalaViewModule.forRoot(), FroalaEditorModule,
-            FroalaViewModule] }); }
+    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, imports: [FroalaEditorModule, FroalaViewModule], exports: [FroalaEditorModule, FroalaViewModule] }); }
+    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, imports: [FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FroalaEditorModule, FroalaViewModule] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FERootModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        FroalaEditorModule.forRoot(),
-                        FroalaViewModule.forRoot()
-                    ],
-                    exports: MODULES
+                    imports: [FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()],
+                    exports: MODULES,
                 }]
         }] });
 
