@@ -7,3 +7,4 @@ export declare class FroalaEditorModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<FroalaEditorModule, [typeof i1.FroalaEditorDirective], never, [typeof i1.FroalaEditorDirective]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<FroalaEditorModule>;
 }
+//# sourceMappingURL=editor.module.d.ts.map

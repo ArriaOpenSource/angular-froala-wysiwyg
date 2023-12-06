@@ -10,3 +10,4 @@ export declare class FERootModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<FERootModule, never, [typeof i1.FroalaEditorModule, typeof i2.FroalaViewModule], [typeof i1.FroalaEditorModule, typeof i2.FroalaViewModule]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<FERootModule>;
 }
+//# sourceMappingURL=index.d.ts.map

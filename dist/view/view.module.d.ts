@@ -7,3 +7,4 @@ export declare class FroalaViewModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<FroalaViewModule, [typeof i1.FroalaViewDirective], never, [typeof i1.FroalaViewDirective]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<FroalaViewModule>;
 }
+//# sourceMappingURL=view.module.d.ts.map

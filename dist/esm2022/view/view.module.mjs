@@ -5,15 +5,16 @@ export class FroalaViewModule {
     static forRoot() {
         return { ngModule: FroalaViewModule, providers: [] };
     }
-    /** @nocollapse */ static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FroalaViewModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-    /** @nocollapse */ static ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.0.5", ngImport: i0, type: FroalaViewModule, declarations: [FroalaViewDirective], exports: [FroalaViewDirective] });
-    /** @nocollapse */ static ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FroalaViewModule });
+    static { this.ɵfac = function FroalaViewModule_Factory(t) { return new (t || FroalaViewModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: FroalaViewModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({}); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.5", ngImport: i0, type: FroalaViewModule, decorators: [{
-            type: NgModule,
-            args: [{
-                    declarations: [FroalaViewDirective],
-                    exports: [FroalaViewDirective],
-                }]
-        }] });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmlldy5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdmlldy92aWV3Lm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsUUFBUSxFQUFzQixNQUFNLGVBQWUsQ0FBQztBQUU1RCxPQUFPLEVBQUMsbUJBQW1CLEVBQUMsTUFBTSxrQkFBa0IsQ0FBQzs7QUFNckQsTUFBTSxPQUFPLGdCQUFnQjtJQUNwQixNQUFNLENBQUMsT0FBTztRQUNuQixPQUFPLEVBQUMsUUFBUSxFQUFFLGdCQUFnQixFQUFFLFNBQVMsRUFBRSxFQUFFLEVBQUMsQ0FBQztJQUNyRCxDQUFDOzBIQUhVLGdCQUFnQjsySEFBaEIsZ0JBQWdCLGlCQUhaLG1CQUFtQixhQUN4QixtQkFBbUI7MkhBRWxCLGdCQUFnQjs7MkZBQWhCLGdCQUFnQjtrQkFKNUIsUUFBUTttQkFBQztvQkFDUixZQUFZLEVBQUUsQ0FBQyxtQkFBbUIsQ0FBQztvQkFDbkMsT0FBTyxFQUFFLENBQUMsbUJBQW1CLENBQUM7aUJBQy9CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtOZ01vZHVsZSwgTW9kdWxlV2l0aFByb3ZpZGVyc30gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcblxyXG5pbXBvcnQge0Zyb2FsYVZpZXdEaXJlY3RpdmV9IGZyb20gJy4vdmlldy5kaXJlY3RpdmUnO1xyXG5cclxuQE5nTW9kdWxlKHtcclxuICBkZWNsYXJhdGlvbnM6IFtGcm9hbGFWaWV3RGlyZWN0aXZlXSxcclxuICBleHBvcnRzOiBbRnJvYWxhVmlld0RpcmVjdGl2ZV0sXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBGcm9hbGFWaWV3TW9kdWxlIHtcclxuICBwdWJsaWMgc3RhdGljIGZvclJvb3QoKTogTW9kdWxlV2l0aFByb3ZpZGVyczxGcm9hbGFWaWV3TW9kdWxlPiB7XHJcbiAgICByZXR1cm4ge25nTW9kdWxlOiBGcm9hbGFWaWV3TW9kdWxlLCBwcm92aWRlcnM6IFtdfTtcclxuICB9XHJcbn1cclxuIl19
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FroalaViewModule, [{
+        type: NgModule,
+        args: [{
+                declarations: [FroalaViewDirective],
+                exports: [FroalaViewDirective],
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FroalaViewModule, { declarations: [FroalaViewDirective], exports: [FroalaViewDirective] }); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmlldy5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdmlldy92aWV3Lm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsUUFBUSxFQUFzQixNQUFNLGVBQWUsQ0FBQztBQUU1RCxPQUFPLEVBQUMsbUJBQW1CLEVBQUMsTUFBTSxrQkFBa0IsQ0FBQzs7QUFNckQsTUFBTSxPQUFPLGdCQUFnQjtJQUNwQixNQUFNLENBQUMsT0FBTztRQUNuQixPQUFPLEVBQUMsUUFBUSxFQUFFLGdCQUFnQixFQUFFLFNBQVMsRUFBRSxFQUFFLEVBQUMsQ0FBQztJQUNyRCxDQUFDO2lGQUhVLGdCQUFnQjttRUFBaEIsZ0JBQWdCOzs7aUZBQWhCLGdCQUFnQjtjQUo1QixRQUFRO2VBQUM7Z0JBQ1IsWUFBWSxFQUFFLENBQUMsbUJBQW1CLENBQUM7Z0JBQ25DLE9BQU8sRUFBRSxDQUFDLG1CQUFtQixDQUFDO2FBQy9COzt3RkFDWSxnQkFBZ0IsbUJBSFosbUJBQW1CLGFBQ3hCLG1CQUFtQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7TmdNb2R1bGUsIE1vZHVsZVdpdGhQcm92aWRlcnN9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5cclxuaW1wb3J0IHtGcm9hbGFWaWV3RGlyZWN0aXZlfSBmcm9tICcuL3ZpZXcuZGlyZWN0aXZlJztcclxuXHJcbkBOZ01vZHVsZSh7XHJcbiAgZGVjbGFyYXRpb25zOiBbRnJvYWxhVmlld0RpcmVjdGl2ZV0sXHJcbiAgZXhwb3J0czogW0Zyb2FsYVZpZXdEaXJlY3RpdmVdLFxyXG59KVxyXG5leHBvcnQgY2xhc3MgRnJvYWxhVmlld01vZHVsZSB7XHJcbiAgcHVibGljIHN0YXRpYyBmb3JSb290KCk6IE1vZHVsZVdpdGhQcm92aWRlcnM8RnJvYWxhVmlld01vZHVsZT4ge1xyXG4gICAgcmV0dXJuIHtuZ01vZHVsZTogRnJvYWxhVmlld01vZHVsZSwgcHJvdmlkZXJzOiBbXX07XHJcbiAgfVxyXG59XHJcbiJdfQ==

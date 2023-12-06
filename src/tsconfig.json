@@ -1,27 +1,27 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "module": "es2015",
-    "target": "es2015",
-    "baseUrl": "./",
-    "stripInternal": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
     "outDir": "../build",
-    "rootDir": ".",
-    "lib": ["es2015", "dom"],
-    "skipLibCheck": true,
-    "types": ["jquery"]
+    "declarationMap": true,
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "types": ["jquery"],
+    "lib": ["dom", "ES2022"]
   },
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
-    "compilationMode": "partial",
-    "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true,
     "flatModuleOutFile": "angular-froala-wysiwyg.js",
     "flatModuleId": "angular-froala-wysiwyg"
   },
-  "files": ["./index.ts"]
+  "files": ["./index.ts"],
+  "exclude": ["src/test.ts", "**/*.spec.ts"]
 }

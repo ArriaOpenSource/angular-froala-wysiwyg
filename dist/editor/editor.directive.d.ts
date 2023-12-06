@@ -39,3 +39,4 @@ export declare class FroalaEditorDirective implements ControlValueAccessor {
     static ɵfac: i0.ɵɵFactoryDeclaration<FroalaEditorDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<FroalaEditorDirective, "[froalaEditor]", ["froalaEditor"], { "froalaEditor": { "alias": "froalaEditor"; "required": false; }; "froalaModel": { "alias": "froalaModel"; "required": false; }; }, { "froalaModelChange": "froalaModelChange"; "froalaInit": "froalaInit"; }, never, never, false, never>;
 }
+//# sourceMappingURL=editor.directive.d.ts.map

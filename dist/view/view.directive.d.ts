@@ -10,3 +10,4 @@ export declare class FroalaViewDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<FroalaViewDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<FroalaViewDirective, "[froalaView]", never, { "froalaView": { "alias": "froalaView"; "required": false; }; }, {}, never, never, false, never>;
 }
+//# sourceMappingURL=view.directive.d.ts.map
