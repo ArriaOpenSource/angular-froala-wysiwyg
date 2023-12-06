@@ -1,6 +1,6 @@
 {
   "name": "angular-froala-wysiwyg",
-  "version": "2.9.8",
+  "version": "2.9.10",
   "dependencies": {
     "froala-editor": "2.9.8",
     "tslib": "^2.3.0"
