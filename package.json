@@ -2,6 +2,9 @@
   "name": "angular-froala-wysiwyg-base",
   "version": "2.9.10",
   "description": "Angular 17+ bindings for Froala WYSIWYG HTML rich text editor",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "demo.serve": "ng serve angular-froala-wysiwyg-demo",
     "demo.build": "ng build angular-froala-wysiwyg-demo",
