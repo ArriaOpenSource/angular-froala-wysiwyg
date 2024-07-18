@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 declare var $: any;
 
 @Component({
@@ -196,9 +196,9 @@ export class AppComponent implements OnInit {
   };
 
   // Sample 9
-  form = new FormGroup({
-    formModel: new FormControl('Hello World', Validators.minLength(2)),
-  }) as FormGroup & {formModel: FormControl};
+  form = new UntypedFormGroup({
+    formModel: new UntypedFormControl('Hello World', Validators.minLength(2)),
+  }) as UntypedFormGroup & {formModel: UntypedFormControl};
   get formModel(): any {
     return this.form.get('formModel');
   }
@@ -210,8 +210,8 @@ export class AppComponent implements OnInit {
   }
 
   // Sample 10
-  form2 = new FormGroup({
-    formModel: new FormControl('Hello World', Validators.minLength(2)),
+  form2 = new UntypedFormGroup({
+    formModel: new UntypedFormControl('Hello World', Validators.minLength(2)),
   });
   get form2Model(): any {
     return this.form2.get('formModel');

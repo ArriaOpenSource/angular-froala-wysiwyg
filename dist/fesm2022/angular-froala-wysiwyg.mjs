@@ -1,4 +1,5 @@
-import { EventEmitter, Directive, forwardRef, ElementRef, NgZone, Input, Output, NgModule, Renderer2 } from '@angular/core';
+import * as i0 from '@angular/core';
+import { EventEmitter, forwardRef, Directive, Input, Output, NgModule } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 class FroalaEditorDirective {
@@ -7,7 +8,7 @@ class FroalaEditorDirective {
         // editor options
         this._opts = {
             immediateAngularModelUpdate: false,
-            angularIgnoreAttrs: null
+            angularIgnoreAttrs: null,
         };
         this.SPECIAL_TAGS = ['img', 'button', 'input', 'a'];
         this.INNER_HTML_ATTR = 'innerHTML';
@@ -35,8 +36,12 @@ class FroalaEditorDirective {
     writeValue(content) {
         this.updateEditor(content);
     }
-    registerOnChange(fn) { this.onChange = fn; }
-    registerOnTouched(fn) { this.onTouched = fn; }
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
     // End ControlValueAccesor methods.
     // froalaEditor directive as input: store the editor options
     set froalaEditor(opts) {
@@ -83,7 +88,8 @@ class FroalaEditorDirective {
                 let attrs = {};
                 for (let i = 0; i < attributeNodes.length; i++) {
                     let attrName = attributeNodes[i].name;
-                    if (this._opts.angularIgnoreAttrs && this._opts.angularIgnoreAttrs.indexOf(attrName) != -1) {
+                    if (this._opts.angularIgnoreAttrs &&
+                        this._opts.angularIgnoreAttrs.indexOf(attrName) != -1) {
                         continue;
                     }
                     attrs[attrName] = attributeNodes[i].value;
@@ -203,7 +209,7 @@ class FroalaEditorDirective {
     }
     destroyEditor() {
         if (this._editorInitialized) {
-            this._$element.off(this._listeningEvents.join(" "));
+            this._$element.off(this._listeningEvents.join(' '));
             this._editor.off('keyup');
             this._$element.froalaEditor('destroy');
             this._listeningEvents.length = 0;
@@ -239,40 +245,54 @@ class FroalaEditorDirective {
     ngOnDestroy() {
         this.destroyEditor();
     }
+    static { this.ɵfac = function FroalaEditorDirective_Factory(t) { return new (t || FroalaEditorDirective)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.NgZone)); }; }
+    static { this.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: FroalaEditorDirective, selectors: [["", "froalaEditor", ""]], inputs: { froalaEditor: "froalaEditor", froalaModel: "froalaModel" }, outputs: { froalaModelChange: "froalaModelChange", froalaInit: "froalaInit" }, exportAs: ["froalaEditor"], features: [i0.ɵɵProvidersFeature([
+                {
+                    provide: NG_VALUE_ACCESSOR,
+                    useExisting: forwardRef(() => FroalaEditorDirective),
+                    multi: true,
+                },
+            ])] }); }
 }
-FroalaEditorDirective.decorators = [
-    { type: Directive, args: [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FroalaEditorDirective, [{
+        type: Directive,
+        args: [{
                 selector: '[froalaEditor]',
                 exportAs: 'froalaEditor',
-                providers: [{
-                        provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => FroalaEditorDirective),
-                        multi: true
-                    }]
-            },] }
-];
-/** @nocollapse */
-FroalaEditorDirective.ctorParameters = () => [
-    { type: ElementRef },
-    { type: NgZone }
-];
-FroalaEditorDirective.propDecorators = {
-    froalaEditor: [{ type: Input }],
-    froalaModel: [{ type: Input }],
-    froalaModelChange: [{ type: Output }],
-    froalaInit: [{ type: Output }]
-};
+                providers: [
+                    {
+                        provide: NG_VALUE_ACCESSOR,
+                        useExisting: forwardRef(() => FroalaEditorDirective),
+                        multi: true,
+                    },
+                ],
+            }]
+    }], () => [{ type: i0.ElementRef }, { type: i0.NgZone }], { froalaEditor: [{
+            type: Input
+        }], froalaModel: [{
+            type: Input
+        }], froalaModelChange: [{
+            type: Output
+        }], froalaInit: [{
+            type: Output
+        }] }); })();
 
 class FroalaEditorModule {
     static forRoot() {
         return { ngModule: FroalaEditorModule, providers: [] };
     }
+    static { this.ɵfac = function FroalaEditorModule_Factory(t) { return new (t || FroalaEditorModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: FroalaEditorModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({}); }
 }
-FroalaEditorModule.decorators = [
-    { type: NgModule, args: [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FroalaEditorModule, [{
+        type: NgModule,
+        args: [{
                 declarations: [FroalaEditorDirective],
                 exports: [FroalaEditorDirective],
-            },] }
-];
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FroalaEditorModule, { declarations: [FroalaEditorDirective], exports: [FroalaEditorDirective] }); })();
 
 class FroalaViewDirective {
     constructor(renderer, element) {
@@ -286,52 +306,52 @@ class FroalaViewDirective {
     ngAfterViewInit() {
         this.renderer.addClass(this._element, "fr-view");
     }
+    static { this.ɵfac = function FroalaViewDirective_Factory(t) { return new (t || FroalaViewDirective)(i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i0.ElementRef)); }; }
+    static { this.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: FroalaViewDirective, selectors: [["", "froalaView", ""]], inputs: { froalaView: "froalaView" } }); }
 }
-FroalaViewDirective.decorators = [
-    { type: Directive, args: [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FroalaViewDirective, [{
+        type: Directive,
+        args: [{
                 selector: '[froalaView]'
-            },] }
-];
-/** @nocollapse */
-FroalaViewDirective.ctorParameters = () => [
-    { type: Renderer2 },
-    { type: ElementRef }
-];
-FroalaViewDirective.propDecorators = {
-    froalaView: [{ type: Input }]
-};
+            }]
+    }], () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }], { froalaView: [{
+            type: Input
+        }] }); })();
 
 class FroalaViewModule {
     static forRoot() {
         return { ngModule: FroalaViewModule, providers: [] };
     }
+    static { this.ɵfac = function FroalaViewModule_Factory(t) { return new (t || FroalaViewModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: FroalaViewModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({}); }
 }
-FroalaViewModule.decorators = [
-    { type: NgModule, args: [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FroalaViewModule, [{
+        type: NgModule,
+        args: [{
                 declarations: [FroalaViewDirective],
                 exports: [FroalaViewDirective],
-            },] }
-];
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FroalaViewModule, { declarations: [FroalaViewDirective], exports: [FroalaViewDirective] }); })();
 
-const MODULES = [
-    FroalaEditorModule,
-    FroalaViewModule
-];
 class FERootModule {
+    static { this.ɵfac = function FERootModule_Factory(t) { return new (t || FERootModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: FERootModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FroalaEditorModule, FroalaViewModule] }); }
 }
-FERootModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    FroalaEditorModule.forRoot(),
-                    FroalaViewModule.forRoot()
-                ],
-                exports: MODULES
-            },] }
-];
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FERootModule, [{
+        type: NgModule,
+        args: [{
+                imports: [FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()],
+                exports: [FroalaEditorModule, FroalaViewModule],
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FERootModule, { imports: [FroalaEditorModule, FroalaViewModule], exports: [FroalaEditorModule, FroalaViewModule] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
 export { FERootModule, FroalaEditorDirective, FroalaEditorModule, FroalaViewDirective, FroalaViewModule };
-//# sourceMappingURL=angular-froala-wysiwyg.js.map
+//# sourceMappingURL=angular-froala-wysiwyg.mjs.map

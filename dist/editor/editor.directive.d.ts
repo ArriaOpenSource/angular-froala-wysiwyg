@@ -1,5 +1,6 @@
-import { ControlValueAccessor } from "@angular/forms";
+import { ControlValueAccessor } from '@angular/forms';
 import { ElementRef, EventEmitter, NgZone } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class FroalaEditorDirective implements ControlValueAccessor {
     private zone;
     private _opts;
@@ -35,4 +36,7 @@ export declare class FroalaEditorDirective implements ControlValueAccessor {
     private generateManualController;
     ngOnInit(): void;
     ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FroalaEditorDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<FroalaEditorDirective, "[froalaEditor]", ["froalaEditor"], { "froalaEditor": { "alias": "froalaEditor"; "required": false; }; "froalaModel": { "alias": "froalaModel"; "required": false; }; }, { "froalaModelChange": "froalaModelChange"; "froalaInit": "froalaInit"; }, never, never, false, never>;
 }
+//# sourceMappingURL=editor.directive.d.ts.map

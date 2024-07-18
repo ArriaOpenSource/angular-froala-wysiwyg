@@ -1,30 +1,16 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import {FroalaEditorModule} from './editor';
-import {FroalaViewModule} from './view';
+import {FroalaEditorModule} from './editor/editor.module';
+import {FroalaViewModule} from './view/view.module';
 
-export {
-  FroalaEditorDirective,
-  FroalaEditorModule
-} from './editor';
+export {FroalaEditorDirective} from './editor/editor.directive';
+export {FroalaEditorModule} from './editor/editor.module';
 
-export {
-  FroalaViewDirective,
-  FroalaViewModule
-} from './view';
-
-const MODULES = [
-  FroalaEditorModule,
-  FroalaViewModule
-]
+export {FroalaViewDirective} from './view/view.directive';
+export {FroalaViewModule} from './view/view.module';
 
 @NgModule({
- imports: [
-   FroalaEditorModule.forRoot(),
-   FroalaViewModule.forRoot()
- ],
- exports: MODULES
+  imports: [FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()],
+  exports: [FroalaEditorModule, FroalaViewModule],
 })
-export class FERootModule {
-
-}
+export class FERootModule {}
